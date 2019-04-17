@@ -23,7 +23,7 @@ spl_autoload_register(function ($class) {
 
 /**
  * Разбирает строку параметров в массив
- * 
+ *
  * @param string $params Строка параметров "CN=213, O=123213"
  * @return array
  */
@@ -46,12 +46,12 @@ if (file_exists(__DIR__ . 'service.time')) {
     $jsonReply->sendError('Сервисные работы, попробуйте позже.');
 }
 
-if (!isset($_POST['hash'], $_POST['sign'])) {
+if (!isset($_GET['hash'], $_GET['sign'])) {
     $jsonReply->sendError('Не переданы hash и sign');
 }
 
-$hash = $_POST['hash'];
-$sign = $_POST['sign'];
+$hash = $_GET['hash'];
+$sign = $_GET['sign'];
 
 try {
     /** @var CProCSP\CPHashedData $hd */

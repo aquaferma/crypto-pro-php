@@ -1,7 +1,7 @@
 <?php
 
 namespace CProCSP;
-
+use libcppcades;
 /**
  * Глобальные константы для установки типов алгоритма хеша, например для CPHashedData::set_Algorithm
  * @var int HASH_ALGORITHM_SHA1 SHA1 hashing algorithm.

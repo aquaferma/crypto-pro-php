@@ -6,7 +6,7 @@ use stdClass;
 
 /**
  * Class JsonReply класс для генерации ответов в формате JSON
- * 
+ *
  * @package CProCSP
  */
 class JsonReply
@@ -24,7 +24,7 @@ class JsonReply
 
     /**
      * Отправляет сообщение об ошибке
-     * 
+     *
      * @param int $status Статус ошибки
      * @param string $message текст сообщения
      */
@@ -54,9 +54,9 @@ class JsonReply
     {
         header('Cache-Control: no-cache, must-revalidate');
         //header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-        header('Content-type: application/json');
+        header('Content-type: text/html; charset=utf-8');
 
-        echo json_encode($this->json);
+        echo json_encode($this->json, JSON_UNESCAPED_UNICODE);
         die();
     }
 
